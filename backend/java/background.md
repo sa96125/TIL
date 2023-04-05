@@ -21,8 +21,6 @@ Java는 오라클(Oracle)에서 개발 및 유지보수하는 <mark style="backg
 * 2014년: <mark style="color:blue;">**Java 8**</mark>이 출시, 이 버전에서 람다 표현식, 스트림 API 등의 새로운 기능이 추가(핵심 기능)
 * 2017년: Java 9가 출시, 이 버전에서 모듈 시스템이 추가
 
-
-
 {% hint style="info" %}
 _Java는 C++ 언어를 기반으로 하며, C++의 복잡성을 줄이고 개발자가 보다 쉽게 개발할 수 있도록 디자인되었습니다. Java는 가비지 컬렉션(Garbage Collection) 기능을 제공하여 개발자가 메모리 관리를 할 필요가 없으며, 다양한 API(Application Programming Interface)와 라이브러리를 제공하여 개발을 보다 쉽게 할 수 있습니다._\
 __
@@ -43,20 +41,16 @@ _자바 9버전 이후로는 6개월마다 기능이 업데이트 되고 있습�
 
 **첫 번째, 다양한 분야에서 사용되고 있다.**
 
-서버 프로그래밍\
-Java는 멀티스레드를 지원하고, 안정성과 확장성이 높은 언어로서 서버 프로그래밍에서 많이 사용됩니다. 대표적인 예로는 Spring Framework, Apache Struts 등이 있습니다.
-
-모바일 애플리케이션\
-Java는 안드로이드(Andriod) 운영체제에서 사용되는 기본 언어 중 하나입니다. 안드로이드 스튜디오와 Java를 함께 사용하여 안드로이드 애플리케이션을 개발할 수 있습니다.
-
-게임\
-Java는 게임 개발 도구로 많이 사용되며, Minecraft 등 대표적인 게임이 Java로 개발되었습니다.
-
-웹 애플리케이션\
-Java는 대규모의 사용자에게 안정적으로 서비스를 제공할 수 있는 언어입니다. JSP(JavaServer Pages), Servlet, Struts 등을 사용하여 웹 애플리케이션을 개발할 수 있습니다.
-
-인공지능(AI)\
-Java는 인공지능 분야에서도 사용됩니다. Weka, Deeplearning4j 등 Java 기반의 인공지능 프레임워크가 있으며, Java는 R, Python 등의 다른 인기있는 언어와 함께 사용되기도 합니다.
+* 서버 프로그래밍\
+  Java는 멀티스레드를 지원하고, 안정성과 확장성이 높은 언어로서 서버 프로그래밍에서 많이 사용됩니다. 대표적인 예로는 Spring Framework, Apache Struts 등이 있습니다.
+* 모바일 애플리케이션\
+  Java는 안드로이드(Andriod) 운영체제에서 사용되는 기본 언어 중 하나입니다. 안드로이드 스튜디오와 Java를 함께 사용하여 안드로이드 애플리케이션을 개발할 수 있습니다.
+* 게임\
+  Java는 게임 개발 도구로 많이 사용되며, Minecraft 등 대표적인 게임이 Java로 개발되었습니다.
+* 웹 애플리케이션\
+  Java는 대규모의 사용자에게 안정적으로 서비스를 제공할 수 있는 언어입니다. JSP(JavaServer Pages), Servlet, Struts 등을 사용하여 웹 애플리케이션을 개발할 수 있습니다.
+* 인공지능(AI)\
+  Java는 인공지능 분야에서도 사용됩니다. Weka, Deeplearning4j 등 Java 기반의 인공지능 프레임워크가 있으며, Java는 R, Python 등의 다른 인기있는 언어와 함께 사용되기도 합니다.
 
 
 
@@ -80,7 +74,7 @@ Java는 주로 객체 지향 언어(Object-Oriented Programming, OOP)로 알려�
 
 Java 8부터는 람다 표현식(Lambda Expressions)과 스트림(Streams) API를 도입하여 함수형 프로그래밍의 기본적인 개념인 일급 함수(First-Class Function), 고차 함수(Higher-Order Function), 순수 함수(Pure Function) 등을 지원합니다. 이러한 함수형 프로그래밍의 기능은 Java 9, 10, 11 등의 버전에서도 추가적으로 지원되고 있습니다.
 
-하지만, Java는 여전히 객체 지향 언어의 특징인 캡슐화(Encapsulation), 상속(Inheritance), 다형성(Polymorphism) 등을 중요하게 다루고 있습니다. 따라서, Java는 OOP를 기본으로 하는 언어이지만, FP를 지원하는 다중 패러다임 언어이기도 합니다.
+하지만, Java는 여전히 객체 지향 언어의 특징인 캡슐화(Encapsulation), 상속(Inheritance), 다형성(Polymorphism) 등을 중요하게 다루고 있습니다. 따라서, <mark style="color:blue;">**Java는 OOP를 기본으로 하는 언어이지만, FP를 지원하는 다중 패러다임 언어**</mark>이기도 합니다.
 
 
 
@@ -88,20 +82,16 @@ Java 8부터는 람다 표현식(Lambda Expressions)과 스트림(Streams) API�
 
 **마지막으로, 대규모 시스템에서 안정적이다.**&#x20;
 
-가비지 컬렉션\
-Java는 가비지 컬렉션 기능을 제공하여 <mark style="color:blue;">**메모리 관리를 자동으로 처리**</mark>합니다. 따라서 개발자가 직접 메모리를 할당하고 해제할 필요가 없으며, 메모리 누수(Memory Leak) 문제를 방지할 수 있습니다.
-
-멀티스레드 지원\
-Java는 멀티스레드를 지원하여 <mark style="color:blue;">**여러 작업을 동시에 처리**</mark>할 수 있습니다. 이를 통해 대규모 트래픽 처리나 병렬 처리 등을 효과적으로 수행할 수 있습니다.
-
-예외 처리(Exception Handling) 기능\
-Java는 예외 처리 기능을 지원하여 예외 상황을 미리 예측하고 처리할 수 있습니다. 이를 통해 안정성이 높은 프로그램을 개발할 수 있습니다.
-
-플랫폼 독립성(Platform Independence)\
-Java는 <mark style="color:blue;">**플랫폼 독립적**</mark>인 특성을 갖습니다. 즉, Java로 작성된 프로그램은 운영체제나 하드웨어 종속성이 없으며, 어떤 플랫폼에서도 실행될 수 있습니다. 이를 통해 대규모의 사용자들이 사용하는 다양한 환경에서 안정적으로 동작할 수 있습니다.
-
-개방형(Open) 표준\
-Java는 개방형 표준(Open Standard)인 Java Community Process(JCP)를 통해 새로운 기술 및 개발 방법을 지속적으로 개선하고, 다양한 개발자와 기업이 참여할 수 있습니다. 이를 통해 높은 수준의 안정성과 개발 생산성을 유지할 수 있습니다.
+* 가비지 컬렉션\
+  Java는 가비지 컬렉션 기능을 제공하여 <mark style="color:blue;">**메모리 관리를 자동으로 처리**</mark>합니다. 따라서 개발자가 직접 메모리를 할당하고 해제할 필요가 없으며, 메모리 누수(Memory Leak) 문제를 방지할 수 있습니다.
+* 멀티스레드 지원\
+  Java는 멀티스레드를 지원하여 <mark style="color:blue;">**여러 작업을 동시에 처리**</mark>할 수 있습니다. 이를 통해 대규모 트래픽 처리나 병렬 처리 등을 효과적으로 수행할 수 있습니다.
+* 예외 처리(Exception Handling) 기능\
+  Java는 예외 처리 기능을 지원하여 예외 상황을 미리 예측하고 처리할 수 있습니다. 이를 통해 안정성이 높은 프로그램을 개발할 수 있습니다.
+* 플랫폼 독립성(Platform Independence)\
+  Java는 <mark style="color:blue;">**플랫폼 독립적**</mark>인 특성을 갖습니다. 즉, Java로 작성된 프로그램은 운영체제나 하드웨어 종속성이 없으며, 어떤 플랫폼에서도 실행될 수 있습니다. 이를 통해 대규모의 사용자들이 사용하는 다양한 환경에서 안정적으로 동작할 수 있습니다.
+* 개방형(Open) 표준\
+  Java는 개방형 표준(Open Standard)인 Java Community Process(JCP)를 통해 새로운 기술 및 개발 방법을 지속적으로 개선하고, 다양한 개발자와 기업이 참여할 수 있습니다. 이를 통해 높은 수준의 안정성과 개발 생산성을 유지할 수 있습니다.
 
 {% hint style="info" %}
 _자바 언어가 플랫폼에 독립적인 이유는 자바 프로그램이 실행되는 가상 컴퓨터(또는 소프트웨어), 자바 가상 머신 JVM 위에서 동작하기 때문입니다._
