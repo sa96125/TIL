@@ -4,7 +4,7 @@
 
 ## core
 
-* [컴퓨터 언어 체계 이해하기](<README (1).md>)
+* [컴퓨터 언어 체계 이해하기](README.md)
 
 ## backend
 
