@@ -1,8 +1,10 @@
+---
+description: 자바의 역사를 둘러보고, 자바란 무엇인지? 왜 자바를 사용하는지 이해 할 수 있습니다:)
+---
+
 # background
 
-### **Java란?**
-
-Java는 오라클(Oracle)에서 개발 및 유지보수하는 객체지향 프로그래밍 언어입니다. 1995년에 발표되어 현재까지도 많은 개발자들이 사용하고 있습니다. Java는 Write Once, Run Anywhere(WORA)라는 특징을 가지고 있어서, 한번 작성한 코드를 다양한 운영체제 및 플랫폼에서 실행할 수 있습니다.
+Java는 오라클(Oracle)에서 개발 및 유지보수하는 <mark style="background-color:red;">**객체지향 프로그래밍 언어**</mark>입니다. 1995년에 발표되어 현재까지도 많은 개발자들이 사용하고 있습니다. Java는 Write Once, Run Anywhere(WORA)라는 특징을 가지고 있어서, 한번 작성한 코드를 다양한 운영체제 및 플랫폼에서 실행할 수 있습니다.
 
 
 
@@ -10,7 +12,7 @@ Java는 오라클(Oracle)에서 개발 및 유지보수하는 객체지향 프�
 * 1995년: Sun Microsystems에서 Oak 언어를 Java로 이름을 변경하고 발표
 * 1996년: JDK 1.0(자바 개발 도구)이 출시
 * 1997년: JDK 1.1이 출시
-* 1998년: <mark style="color:blue;">**Java2**</mark>(J2SE 1.2) 출시, J2SE(스탠다드), J2ME(마이크로), J2EE(엔터프라이즈)
+* 1998년: <mark style="color:blue;">**Java 2**</mark>(J2SE 1.2) 출시, J2SE(스탠다드), J2ME(마이크로), J2EE(엔터프라이즈)
 * 2000년: J2SE 1.3이 출시
 * 2004년: <mark style="color:blue;">**Java 5**</mark>(J2SE 1.5) 출시, 이 버전에서 제네릭스, 열거형, 애노테이션 등의 새로운 기능이 추가
 * 2006년: Sun Microsystems에서 Java SE, Java EE, Java ME 등의 다양한 플랫폼을 발표
@@ -32,23 +34,35 @@ _자바 9버전 이후로는 6개월마다 기능이 업데이트 되고 있습�
 
 ****
 
-### **왜 Java를 사용 할까?**
-
-Java는 서버, 모바일, 웹, 게임 등 다양한 분야에서 사용되며, 개발된 애플리케이션은 대규모의 사용자에게 안정적으로 제공될 수 있습니다. Java는 또한 Android 운영체제에서 사용되는 기본 언어 중 하나입니다.
-
-
-
-<mark style="color:blue;">**다양한 분야에서 사용되고 있다.**</mark>
-
-* 서버 프로그래밍(Server Programming), Java는 멀티스레드(Multithreading)를 지원하고, 안정성과 확장성이 높은 언어로서 서버 프로그래밍에서 많이 사용됩니다. 대표적인 예로는 Spring Framework, Apache Struts 등이 있습니다.
-* 모바일 애플리케이션(Mobile Application), Java는 안드로이드(Andriod) 운영체제에서 사용되는 기본 언어 중 하나입니다. 안드로이드 스튜디오(Android Studio)와 Java를 함께 사용하여 안드로이드 애플리케이션을 개발할 수 있습니다.
-* 게임(Game), Java는 게임 개발 도구로 많이 사용되며, Minecraft 등 대표적인 게임이 Java로 개발되었습니다.
-* 웹 애플리케이션(Web Application), Java는 대규모의 사용자에게 안정적으로 서비스를 제공할 수 있는 언어입니다. JSP(JavaServer Pages), Servlet, Struts 등을 사용하여 웹 애플리케이션을 개발할 수 있습니다.
-* 인공지능(AI), Java는 인공지능 분야에서도 사용됩니다. Weka, Deeplearning4j 등 Java 기반의 인공지능 프레임워크가 있으며, Java는 R, Python 등의 다른 인기있는 언어와 함께 사용되기도 합니다.
+현대 시대에는 무수한 컴퓨터프로그래밍 언어가 세상에 존재합니다. \
+그렇다면, 수 많은 언어중 <mark style="background-color:red;">**자바를 사용하는 이유**</mark>는 무엇 일까요?
 
 
 
-<mark style="color:blue;">**20년 동안 사랑 받는 프로그래밍 언어이다.**</mark>
+
+
+**첫 번째, 다양한 분야에서 사용되고 있다.**
+
+서버 프로그래밍\
+Java는 멀티스레드를 지원하고, 안정성과 확장성이 높은 언어로서 서버 프로그래밍에서 많이 사용됩니다. 대표적인 예로는 Spring Framework, Apache Struts 등이 있습니다.
+
+모바일 애플리케이션\
+Java는 안드로이드(Andriod) 운영체제에서 사용되는 기본 언어 중 하나입니다. 안드로이드 스튜디오와 Java를 함께 사용하여 안드로이드 애플리케이션을 개발할 수 있습니다.
+
+게임\
+Java는 게임 개발 도구로 많이 사용되며, Minecraft 등 대표적인 게임이 Java로 개발되었습니다.
+
+웹 애플리케이션\
+Java는 대규모의 사용자에게 안정적으로 서비스를 제공할 수 있는 언어입니다. JSP(JavaServer Pages), Servlet, Struts 등을 사용하여 웹 애플리케이션을 개발할 수 있습니다.
+
+인공지능(AI)\
+Java는 인공지능 분야에서도 사용됩니다. Weka, Deeplearning4j 등 Java 기반의 인공지능 프레임워크가 있으며, Java는 R, Python 등의 다른 인기있는 언어와 함께 사용되기도 합니다.
+
+
+
+
+
+**두 번째, 20년 동안 사랑 받는 프로그래밍 언어이다.**
 
 2022년 TIOBE 프로그래밍 언어 지수에 따른, 상위 10개 프로그래밍 언어 중 Java는 2위에 랭크되어 있는 것을 확인 할 수 있어요:)
 
@@ -58,7 +72,9 @@ _TIOBE INDEX 순위는 인기 있는 언어들의 검색 빈도, 개발자 수, 
 
 
 
-<mark style="color:blue;">**모던 프로그래밍 언어이다.**</mark>
+
+
+**세 번째, 모던 프로그래밍 언어이다.**
 
 Java는 주로 객체 지향 언어(Object-Oriented Programming, OOP)로 알려져 있지만, Java 8부터 함수형 프로그래밍(Functional Programming, FP)을 지원하도록 업그레이드 되었습니다. 따라서 Java는 OOP와 FP 모두를 지원하는 다중 패러다임 언어(Multi-Paradigm Programming Language)로 분류됩니다.
 
@@ -68,13 +84,24 @@ Java 8부터는 람다 표현식(Lambda Expressions)과 스트림(Streams) API�
 
 
 
-<mark style="color:blue;">**대규모 시스템에서 안정적이다.**</mark>&#x20;
 
-* 가비지 컬렉션(Garbage Collection) 기능, Java는 가비지 컬렉션 기능을 제공하여 <mark style="background-color:red;">**메모리 관리를 자동으로 처리**</mark>합니다. 따라서 개발자가 직접 메모리를 할당하고 해제할 필요가 없으며, 메모리 누수(Memory Leak) 문제를 방지할 수 있습니다.
-* 멀티스레드 지원, Java는 멀티스레드를 지원하여 <mark style="background-color:red;">**여러 작업을 동시에 처리**</mark>할 수 있습니다. 이를 통해 대규모 트래픽 처리나 병렬 처리 등을 효과적으로 수행할 수 있습니다.
-* 예외 처리(Exception Handling) 기능, Java는 예외 처리 기능을 지원하여 예외 상황을 미리 예측하고 처리할 수 있습니다. 이를 통해 안정성이 높은 프로그램을 개발할 수 있습니다.
-* 플랫폼 독립성(Platform Independence), Java는 <mark style="background-color:red;">**플랫폼 독립적**</mark>인 특성을 갖습니다. 즉, Java로 작성된 프로그램은 운영체제나 하드웨어 종속성이 없으며, 어떤 플랫폼에서도 실행될 수 있습니다. 이를 통해 대규모의 사용자들이 사용하는 다양한 환경에서 안정적으로 동작할 수 있습니다.
-* 개방형(Open) 표준, Java는 개방형 표준(Open Standard)인 Java Community Process(JCP)를 통해 새로운 기술 및 개발 방법을 지속적으로 개선하고, 다양한 개발자와 기업이 참여할 수 있습니다. 이를 통해 높은 수준의 안정성과 개발 생산성을 유지할 수 있습니다.
+
+**마지막으로, 대규모 시스템에서 안정적이다.**&#x20;
+
+가비지 컬렉션\
+Java는 가비지 컬렉션 기능을 제공하여 <mark style="color:blue;">**메모리 관리를 자동으로 처리**</mark>합니다. 따라서 개발자가 직접 메모리를 할당하고 해제할 필요가 없으며, 메모리 누수(Memory Leak) 문제를 방지할 수 있습니다.
+
+멀티스레드 지원\
+Java는 멀티스레드를 지원하여 <mark style="color:blue;">**여러 작업을 동시에 처리**</mark>할 수 있습니다. 이를 통해 대규모 트래픽 처리나 병렬 처리 등을 효과적으로 수행할 수 있습니다.
+
+예외 처리(Exception Handling) 기능\
+Java는 예외 처리 기능을 지원하여 예외 상황을 미리 예측하고 처리할 수 있습니다. 이를 통해 안정성이 높은 프로그램을 개발할 수 있습니다.
+
+플랫폼 독립성(Platform Independence)\
+Java는 <mark style="color:blue;">**플랫폼 독립적**</mark>인 특성을 갖습니다. 즉, Java로 작성된 프로그램은 운영체제나 하드웨어 종속성이 없으며, 어떤 플랫폼에서도 실행될 수 있습니다. 이를 통해 대규모의 사용자들이 사용하는 다양한 환경에서 안정적으로 동작할 수 있습니다.
+
+개방형(Open) 표준\
+Java는 개방형 표준(Open Standard)인 Java Community Process(JCP)를 통해 새로운 기술 및 개발 방법을 지속적으로 개선하고, 다양한 개발자와 기업이 참여할 수 있습니다. 이를 통해 높은 수준의 안정성과 개발 생산성을 유지할 수 있습니다.
 
 {% hint style="info" %}
 _자바 언어가 플랫폼에 독립적인 이유는 자바 프로그램이 실행되는 가상 컴퓨터(또는 소프트웨어), 자바 가상 머신 JVM 위에서 동작하기 때문입니다._
