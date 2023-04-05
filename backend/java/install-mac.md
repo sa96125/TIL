@@ -4,13 +4,13 @@ description: JDK가 무엇인지, 필요한 이유를 이해하고 개발 환경
 
 # install(Mac)
 
-자바 언어로 프로그램을 개발하기 위해서는 자바 개발 도구(JDK)가 필수적입니다. JDK(Java Development Kit)는 Java 언어로 소프트웨어를 개발하기 위한 도구 모음입니다. JDK는 Java 개발자들이 Java 프로그램을 작성하고, 컴파일하고, 디버그하며, 배포할 수 있는 필수 도구를 제공합니다.
+자바 언어로 프로그램을 개발하기 위해서는 자바 개발 도구(JDK)가 필수적입니다. JDK(Java Development Kit)는 <mark style="background-color:red;">**Java 언어로 소프트웨어를 개발하기 위한 도구 모음**</mark>입니다. JDK는 Java 개발자들이 Java 프로그램을 작성하고, 컴파일하고, 디버그하며, 배포할 수 있는 필수 도구를 제공합니다.
 
 
 
 
 
-&#x20;MacOS에서 <mark style="background-color:red;">**자바 프로그램을 개발할 수 있는 환경을 구성**</mark>해보겠습니다.&#x20;
+&#x20;MacOS에서 자바 프로그램을 개발할 수 있는 환경을 구성해보겠습니다.&#x20;
 
 ```sh
 # Homebrew 설치
