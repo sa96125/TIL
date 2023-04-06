@@ -9,6 +9,8 @@
 ## backend
 
 * [Java](backend/java/README.md)
-  * [core](backend/java/core.md)
-  * [background](backend/java/background.md)
-  * [install(Mac)](backend/java/install-mac.md)
+  * [배경](backend/java/undefined.md)
+  * [설치(Mac)](backend/java/mac.md)
+  * [개발환경(intelliJ)](backend/java/intellij.md)
+  * [변수와 상수, 리터럴](backend/java/undefined-1.md)
+  * [keywords](backend/java/keywords.md)
