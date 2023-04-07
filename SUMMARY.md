@@ -14,7 +14,7 @@
   * [배열](backend/java/undefined-4.md)
   * [클래스](backend/java/undefined-5.md)
   * [에러 핸들링](backend/java/undefined-6.md)
-  * [keywords](backend/java/keywords.md)
+  * [용어정리](backend/java/undefined-7.md)
 * [Spring](backend/spring/README.md)
   * [배경](backend/spring/undefined.md)
 

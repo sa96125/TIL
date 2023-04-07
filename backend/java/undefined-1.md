@@ -8,17 +8,12 @@
 
 
 
-
-
 _<mark style="background-color:yellow;">자바에서 변수를 사용하는 방법은 다음과 같습니다.</mark>_
 
 1. 먼저, 변수가 저장할 데이터의 타입을 지정합니다.&#x20;
 2. 변수 이름은 해당 변수를 식별하기 위한 이름을 지정합니다.&#x20;
 3. 변수를 선언한 후에는 변수를 초기화하여 값을 할당할 수 있습니다.
-
-
-
-:warning:변수의 사용, 즉 읽기 전에는 꼭 값이 초기화 되어 있어야합니다.
+4. 변수의 사용, 즉 읽기 전에는 꼭 값이 초기화 되어 있어야합니다.
 
 ```java
 // 변수 선언과 할당
@@ -34,8 +29,6 @@ int x = 0 , y = 3;
 // 상수 선언과 할당
 final int MAX = 100;
 ```
-
-
 
 
 
@@ -69,8 +62,6 @@ final int MAXIMUM_NUMBER = 100;
 
 
 
-
-
 _<mark style="background-color:yellow;">자바스크립트의 경우, 데이터 타입을 명시하지 않아도 되던데,</mark>_\
 _<mark style="background-color:yellow;">왜 자바는 데이터 타입을 일일히 선언해주어야 할까요?</mark>_
 
@@ -80,8 +71,6 @@ _<mark style="background-color:yellow;">왜 자바는 데이터 타입을 일일
 * 자바는 데이터 타입에 따라 <mark style="color:blue;">**데이터의 유효성을 검증**</mark>합니다. 예를 들어, 정수형 변수에 문자열을 할당하려고 하면 컴파일러가 이를 감지하고 오류를 발생시킵니다. 이렇게 하면 프로그램에서 오류를 미리 방지할 수 있습니다.
 * 변수의 데이터 타입을 미리 선언해 놓으면 <mark style="color:blue;">**코드의 가독성이 높아집니다**</mark>. 다른 개발자가 코드를 읽을 때 변수의 데이터 타입을 쉽게 파악할 수 있기 때문입니다.
 * 메서드에서 반환되는 값의 데이터 타입을 명시하면, 해당 메서드를 사용하는 코드에서 <mark style="color:blue;">**반환되는 값의 타입을 쉽게 파악**</mark>할 수 있습니다. 이렇게 하면 코드의 가독성과 유지보수성이 높아집니다.
-
-
 
 
 
@@ -133,8 +122,6 @@ int[] myArray = new int[5];
 
 
 
-&#x20;
-
 _<mark style="background-color:yellow;">변수와 상수의 차이점은 OK</mark>_\
 _<mark style="background-color:yellow;">But, 자바에서는 리터럴이라는 생소한 용어가 또 있던데 정확히 뭘 의미하는 걸까요?</mark>_\
 _<mark style="background-color:yellow;">도대체 상수랑 어떤 차이점이 있을까요?</mark>_
@@ -173,8 +160,6 @@ System.out.println("\'Hello, world!\'"); // 작은 따옴표
 System.out.println("\"Hello, world!\""); // 큰 따옴표
 System.out.println("C:\\Windows\\system32"); // 역슬래시
 ```
-
-
 
 
 

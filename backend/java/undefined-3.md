@@ -6,8 +6,6 @@
 
 
 
-
-
 _<mark style="background-color:yellow;">마찬가지로, 자바에서 사용하는 조건문은 다른 프로그래밍 언어와 큰 차이가 없으니,</mark>_ \
 _<mark style="background-color:yellow;">예시 코드를 보고 빠르게 숙지할 수 있도록 합시다 :)</mark>_
 
@@ -52,8 +50,6 @@ switch (변수) {
 
 
 
-
-
 _<mark style="background-color:yellow;">상황에 따라 if문을 사용하기도 switch문을 사용하기도 합니다.</mark>_\
 _<mark style="background-color:yellow;">둘의 차이점을 뭘까요? 성능적인 차이도 있을까요?</mark>_
 
@@ -66,8 +62,6 @@ if문은 조건식이 참(true)인 경우 해당 블록을 실행합니다. 따�
 
 
 따라서, if문과 switch문 중 어떤 것을 사용할지는 조건의 복잡도와 데이터 타입, 실행 속도 등 다양한 요소를 고려하여 결정해야 합니다. 일반적으로, 조건의 개수가 많거나 조건이 복잡한 경우에는 if문을 사용하는 것이 더 나을 수 있습니다. 하지만, 조건의 개수가 제한적이고 간단한 경우에는 switch문을 사용하는 것이 더 효율적일 수 있습니다.
-
-
 
 
 

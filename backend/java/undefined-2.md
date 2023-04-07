@@ -6,8 +6,6 @@
 
 
 
-
-
 _<mark style="background-color:yellow;">자바에서 사용하는 연산자는 다른 프로그래밍 언어와 큰 차이가 없으니,</mark>_ \
 _<mark style="background-color:yellow;">예시 코드를 보고 빠르게 숙지할 수 있도록 합시다 :)</mark>_
 
@@ -88,8 +86,6 @@ if (animal2 instanceof Dog) {
 
 
 
-
-
 _<mark style="background-color:yellow;">생각해보니 우리가 사칙연산할 때, 연산자  우선 순위에 따라 식의 계산 결과가 달라지잔아요?</mark>_\
 _<mark style="background-color:yellow;">이렇게 많은 연산자가 있는 걸보니 컴퓨터가 계산하는 방식이 다를 것 같은데..?</mark>_
 
@@ -104,8 +100,6 @@ _<mark style="background-color:yellow;">이렇게 많은 연산자가 있는 걸
 7. 논리 연산자 (&&, ||, !)
 8. 삼항 연산자 (조건식 ? 피연산자1 : 피연산자2)
 9. 대입 연산자 (=, +=, -=, \*=, /=, %=, <<=, >>=, >>>=, &=, ^=, |=)
-
-
 
 
 
