@@ -72,16 +72,24 @@ jongseungMac > javac Hello.java
 
 <details>
 
-<summary>java.exe?</summary>
+<summary></summary>
+
+&#x20;일ㅂ
+
+```sh
+ 
+```
+
+</details>
+
+**java.exe?**
 
 `java.exe` 는 Java 인터프리터입니다.  Java 프로그램(.class)를 실행하는 도구 입니다.
 
 ```sh
 # java 프로그램(.class) 실행
-jongseungMac > java Hello    
+jongseungMac > java Hello  
 ```
-
-</details>
 
 
 
