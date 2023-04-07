@@ -8,7 +8,7 @@
 
 
 
-_<mark style="background-color:yellow;">자바에서 변수를 사용하는 방법은 다음과 같습니다.</mark>_
+_<mark style="background-color:yellow;">자바에서 변수를 선언하는 방법과 주의사항은 다음과 같습니다.</mark>_
 
 1. 먼저, 변수가 저장할 데이터의 타입을 지정합니다.&#x20;
 2. 변수 이름은 해당 변수를 식별하기 위한 이름을 지정합니다.&#x20;
