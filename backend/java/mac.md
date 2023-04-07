@@ -6,7 +6,9 @@
 
 
 
-&#x20;MacOS에서 자바 프로그램을 개발할 수 있는 환경을 구성해보겠습니다.&#x20;
+
+
+&#x20;_<mark style="background-color:yellow;">바로, MacOS에서 자바 프로그램을 개발할 수 있는 환경을 구성해봅시다.</mark>_
 
 ```sh
 # Homebrew 설치
@@ -38,14 +40,6 @@ jongseungMac > java --version
 _<mark style="background-color:yellow;">잠깐, 설치까지는 OK.</mark>_ \
 _<mark style="background-color:yellow;">그런데 환경변수를 왜 셋팅하는 걸까요?</mark>_
 
-
-
-
-
-
-
-**환경 변수**&#x20;
-
 JDK를 설치한 후 환경 변수를 설정합니다. 그 이유는 Java 애플리케이션을 실행하기 위해 필요한 경로와 같은 정보를 컴퓨터가 인식할 수 있도록 하기 위함입니다. Java 애플리케이션을 실행하려면, 컴퓨터가 JDK 설치 위치와 같은 정보를 알아야 합니다. 환경 변수를 설정하면 이러한 정보를 저장하고, Java 애플리케이션이 이 정보를 사용할 수 있도록 합니다.
 
 
@@ -56,7 +50,10 @@ JDK를 설치한 후 환경 변수를 설정합니다. 그 이유는 Java 애플
 
 
 
-컴퓨터의 기본 콘솔이 zsh일 경우, 환경 변수를 설정하는 방법은 다음과 같습니다.
+
+
+_<mark style="background-color:yellow;">컴퓨터의 기본 콘솔이 zsh일 경우,</mark>_ \
+_<mark style="background-color:yellow;">환경 변수를 설정하는 방법은 다음과 같습니다.</mark>_
 
 ```sh
 # 현재 사용하고 있는 쉘

@@ -13,14 +13,6 @@ Java는 Oracle에서 개발 및 유지보수하는 <mark style="color:blue;">**�
 _<mark style="background-color:yellow;">난 사실, 자바하면 오라클이 떠오르긴 하는데.. 누가 만들었을까요?</mark>_\
 _<mark style="background-color:yellow;">뭐 만하면 Java 8! Java 8! Java 8이 뭔데, 왜 표준처럼 자리 잡은 걸까요?</mark>_
 
-
-
-
-
-
-
-**자바의 역사**
-
 * 1991년: 제임스 고슬링(James Gosling)과 그의 동료들이 "Oak"이라는 이름의 객체지향 언어를 개발
 * 1995년: Sun Microsystems에서 Oak 언어를 Java로 이름을 변경하고 발표
 * 1996년: JDK 1.0(자바 개발 도구)이 출시
@@ -43,12 +35,6 @@ _<mark style="background-color:yellow;">뭐 만하면 Java 8! Java 8! Java 8이 
 _<mark style="background-color:yellow;">현대 시대에는 무수한 컴퓨터프로그래밍 언어가 세상에 존재합니다.</mark>_ \
 _<mark style="background-color:yellow;">그렇다면, 수 많은 언어중 자바를 사용하는 이유는 무엇 일까요?</mark>_
 
-
-
-
-
-
-
 **첫 번째, 다양한 분야에서 사용되고 있다.**
 
 * 서버 프로그래밍\
@@ -64,13 +50,9 @@ _<mark style="background-color:yellow;">그렇다면, 수 많은 언어중 자�
 
 
 
-
-
 **두 번째, 20년 동안 사랑 받는 프로그래밍 언어이다.**
 
 2022년 TIOBE 프로그래밍 언어 지수에 따른, 상위 10개 프로그래밍 언어 중 Java는 2위에 랭크되어 있는 것을 확인 할 수 있습니다. TIOBE INDEX 순위는 인기 있는 언어들의 검색 빈도, 개발자 수, 코드량, 커뮤니티 활동 등을 종합적으로 평가하여 산출된 지수입니다. 프로그래밍 언어의 사용과 인기는 항상 변화하고 있습니다. 근 20년 동안 상위에 렝크 되어 왔으며, 배우기 쉽고 풍부한 학습자료를 가지고 있습니다.
-
-
 
 
 
@@ -81,8 +63,6 @@ Java는 주로 객체 지향 언어(Object-Oriented Programming, OOP)로 알려�
 Java 8부터는 람다 표현식(Lambda Expressions)과 스트림(Streams) API를 도입하여 함수형 프로그래밍의 기본적인 개념인 일급 함수(First-Class Function), 고차 함수(Higher-Order Function), 순수 함수(Pure Function) 등을 지원합니다. 이러한 함수형 프로그래밍의 기능은 Java 9, 10, 11 등의 버전에서도 추가적으로 지원되고 있습니다.
 
 하지만, Java는 여전히 객체 지향 언어의 특징인 캡슐화(Encapsulation), 상속(Inheritance), 다형성(Polymorphism) 등을 중요하게 다루고 있습니다. 따라서, <mark style="color:blue;">**Java는 OOP를 기본으로 하는 언어이지만, FP를 지원하는 다중 패러다임 언어**</mark>이기도 합니다.
-
-
 
 
 
