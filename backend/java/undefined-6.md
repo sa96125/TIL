@@ -6,8 +6,7 @@
 
 
 
-_<mark style="background-color:yellow;">크흠, 이론상으로는 무슨말인지 알겠어요.</mark>_\
-_<mark style="background-color:yellow;">이해하기 쉬운 코드가 있으면 더 좋을 것 같은데 :)</mark>_
+_<mark style="background-color:yellow;">예시 코드를 살펴보겠습니다.</mark>_
 
 ```java
 // 부모 클래스

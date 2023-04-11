@@ -8,7 +8,7 @@
 
 
 
-_<mark style="background-color:yellow;">바로, 예시 코드를 살펴보겠습니다.</mark>_
+_<mark style="background-color:yellow;">예시 코드를 살펴보겠습니다.</mark>_
 
 ```java
 // Shape 클래스
