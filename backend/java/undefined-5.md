@@ -309,7 +309,54 @@ class InitBlock {
 
 
 
-_<mark style="background-color:yellow;">추상클래스?</mark>_
+_<mark style="background-color:yellow;">클래스를 정의가 완벽하지 않는 경우에는 어떻게 설계를 해야할까요?</mark>_
+
+그동안 클래스를 설계도라고 표현했었는데, 추상클래스는 <mark style="color:blue;">미완성 설계도로 하나 이상의 추상 메서드를 포함하고 있는 클래스</mark>입니다. 실제 동작을 수행하는 코드는 하위 클래스에서 구현해야 합니다. 추상 클래스는 하위 클래스에서 공통된 속성과 메서드를 상속받아 재사용성을 높일 수 있는 장점이 있습니다.
+
+* 추상클래스(미완성 설계도)로는 인스턴스를 생성할 수 없다.
+* 미완성 메서드가 존재한다. 고로 하위 클래스에서 메서드를 완성해야 한다.
+* 주석을 통해 어떤 기능을 수행할 목적으로 작성하였는지 설명한다.
+
+
+
+추상 클래스는 `abstract` 키워드를 사용하여 정의합니다.
+
+```java
+public abstract class AbstractClass {
+    // 추상 메서드 선언
+    public abstract void abstractMethod();
+
+    // 일반 메서드 정의
+    public void concreteMethod() {
+        System.out.println("This is a concrete method.");
+    }
+}
+```
+
+
+
+추상 메서드는 메서드 이름 앞에 `abstract` 키워드를 붙여 선언합니다. 추상 클래스는 인스턴스를 생성할 수 없으므로, 하위 클래스에서 상속받아 구현해야 합니다.
+
+
+
+
+
+
+
+_<mark style="background-color:yellow;">근데 내용이 없는 메서드의 선언이 굳이 의미가 있는 건가요?</mark>_
+
+실제 메서드를 작성할 때 실제 작업 내용인 구현부보다 더 중요한 부분이 선언부입니다. 메서드의 이름과 메서드의 작업에 필요한 매개변수, 그리고 어떤 타입의 값을 반환할 것인가를 결정하는 것은 쉽지 않은 일입니다. 오히려, 실제 구현부에서는 선언부의 내용만 알고 있으면 내부로직을 작성하는 일은 쉽습니다. 선언부만 작성해도 메서드의 절반 이상이 완성된 것이라 해도 과언이 아닙니다.
+
+
+
+
+
+
+
+_<mark style="background-color:yellow;">자식클래스에서 오버라이딩해서 함수를 재정의해서 구현하는거나,</mark>_\
+_<mark style="background-color:yellow;">추상클래스를 정의해서 사용하는거나 기능적으로는 똑같지 않나요?</mark>_
+
+굳이 추상클래스로 작성하는 이유는 <mark style="color:blue;">'반드시' 구현</mark>하도록 강요하기 위해서 입니다. 만일 추상 클래스로 정의 되어 있지 않고 빈 몸통만 가지도록 정의되어 있다면, 상속받는 자식 클래스에서는 이 메서드들이 온전히 구현된 것으로 인식하고 오버라이딩을 통해 자신의 클래스에 맞도록 구현하지 않을 수도 있습니다.&#x20;
 
 
 
@@ -318,6 +365,8 @@ _<mark style="background-color:yellow;">추상클래스?</mark>_
 
 
 _<mark style="background-color:yellow;">내부클래스?</mark>_
+
+
 
 
 
