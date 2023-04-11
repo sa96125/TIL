@@ -34,6 +34,8 @@ final int MAX = 100;
 
 
 
+
+
 _<mark style="background-color:yellow;">유튜브에서 보니까 변수이름을 이모티콘으로 짓거나, 한글로도 가능하던데</mark>_\
 _<mark style="background-color:yellow;">그냥 마음대로 작명할 수 있는 걸까요?</mark>_
 
@@ -62,6 +64,8 @@ final int MAXIMUM_NUMBER = 100;
 
 
 
+
+
 _<mark style="background-color:yellow;">자바스크립트의 경우, 데이터 타입을 명시하지 않아도 되던데,</mark>_\
 _<mark style="background-color:yellow;">왜 자바는 데이터 타입을 일일히 선언해주어야 할까요?</mark>_
 
@@ -76,6 +80,9 @@ _<mark style="background-color:yellow;">왜 자바는 데이터 타입을 일일
 
 
 
+
+
+_<mark style="background-color:yellow;">데이터 타입을 명시해줘야한다면, 개발자가 데이터 타입을 모두 숙지해야하나요?</mark>_\
 _<mark style="background-color:yellow;">자바에서 제공하는 데이터 타입은 무엇이 있을까요?</mark>_
 
 값은 문자(char/2), 숫자(byte/1, short/2, **int/4**, long/8, float/4, **double/8**), 논리(boolean/1)로 채워질 수 있는데 자바에서는 8가지 기본형 타입을 제공합니다. 기본형 자료타입은 데이터를 직접 저장하는 자료형으로, 스택(stack) 메모리에 값을 직접 저장합니다.
@@ -122,8 +129,10 @@ int[] myArray = new int[5];
 
 
 
+
+
 _<mark style="background-color:yellow;">변수와 상수의 차이점은 OK</mark>_\
-_<mark style="background-color:yellow;">But, 자바에서는 리터럴이라는 생소한 용어가 또 있던데 정확히 뭘 의미하는 걸까요?</mark>_\
+_<mark style="background-color:yellow;">그런데, 자바에서는 리터럴이라는 생소한 용어가 또 있던데 정확히 뭘 의미하는 걸까요?</mark>_\
 _<mark style="background-color:yellow;">도대체 상수랑 어떤 차이점이 있을까요?</mark>_
 
 리터럴은그 자체로 <mark style="color:blue;">값을 의미</mark>하는 것입니다. 예를 들어, 위의 코드에서는 할당 연산자(=)의 오른쪽, 즉 할당되는 값을 리터럴이라 표현하고 왼쪽의 이름은 변수와 상수로 구별합니다. 사실 상수의 개념과 리터럴의 개념은 동일하나 이미 자바에서 상수의 뜻을 특별하게 정의해서 추가적인 의미를 정의할 필요가 있었습니다.
@@ -160,6 +169,8 @@ System.out.println("\'Hello, world!\'"); // 작은 따옴표
 System.out.println("\"Hello, world!\""); // 큰 따옴표
 System.out.println("C:\\Windows\\system32"); // 역슬래시
 ```
+
+
 
 
 

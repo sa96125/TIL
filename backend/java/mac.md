@@ -6,7 +6,7 @@
 
 
 
-&#x20;_<mark style="background-color:yellow;">바로, MacOS에서 자바 프로그램을 개발할 수 있는 환경을 구성해봅시다.</mark>_
+_<mark style="background-color:yellow;">바로, MacOS에서 자바 프로그램을 개발할 수 있는 환경을 구성해봅시다.</mark>_ <mark style="background-color:yellow;"></mark><mark style="background-color:yellow;">🤩</mark>
 
 ```sh
 # Homebrew 설치
@@ -33,6 +33,8 @@ jongseungMac > java --version
 
 
 
+
+
 _<mark style="background-color:yellow;">잠깐, 설치까지는 OK.</mark>_ \
 _<mark style="background-color:yellow;">그런데 환경변수를 왜 셋팅하는 걸까요?</mark>_
 
@@ -41,6 +43,8 @@ JDK를 설치한 후 환경 변수를 설정합니다. 그 이유는 Java 애플
 
 
 일반적으로, JDK 설치 프로그램은 PATH 환경 변수를 설정하는 선택을 제공합니다. <mark style="color:blue;">PATH 환경 변수는 컴퓨터가 실행 파일을 찾는 데 사용하는 경로를 저장</mark>합니다. 따라서 PATH 환경 변수를 설정하면 Java 실행 파일이 저장된 디렉토리를 지정할 수 있습니다. 환경 변수를 설정하지 않으면 Java 애플리케이션을 실행할 때마다 JDK 설치 위치를 수동으로 지정해야 합니다. 이는 귀찮은 작업이며, Java 애플리케이션을 실행할 때마다 같은 작업을 반복해야 합니다. 따라서, 환경 변수를 설정하는 것이 편리하고 효율적입니다.
+
+
 
 
 
