@@ -366,7 +366,20 @@ _<mark style="background-color:yellow;">추상클래스를 정의해서 사용�
 
 _<mark style="background-color:yellow;">내부클래스?</mark>_
 
+내부 클래스는 다른 클래스 내부에 선언되는 클래스입니다. 내부 클래스는 외부 클래스의 멤버 변수 및 메서드에 쉽게 접근할 수 있으며, 외부 클래스의 보안성을 높일 수 있습니다. 내부 클래스는 다음과 같이 선언됩니다.
 
+```java
+public class OuterClass {
+    private int x = 10;
+
+    // Inner Class
+    public class InnerClass {
+        public void printX() {
+            System.out.println(x);
+        }
+    }
+}
+```
 
 
 
@@ -376,3 +389,33 @@ _<mark style="background-color:yellow;">내부클래스?</mark>_
 
 _<mark style="background-color:yellow;">익명클래스?</mark>_
 
+익명 클래스는 이름이 없는 클래스로, 클래스를 선언과 동시에 객체를 생성할 때 사용됩니다. 주로 인터페이스나 추상 클래스를 구현하는 경우에 사용됩니다. 익명 클래스는 다음과 같이 선언됩니다.
+
+```java
+public class OuterClass {
+    public void printMessage() {
+        System.out.println("Hello World!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Anonymous Class
+        OuterClass anonymousClass = new OuterClass() {
+            public void printMessage() {
+                System.out.println("Hi there!");
+            }
+        };
+
+        anonymousClass.printMessage();
+    }
+}
+```
+
+
+
+위 코드에서 `OuterClass`는 일반적인 클래스이며, `Main` 클래스에서 `anonymousClass`라는 이름의 익명 클래스를 선언하여 객체를 생성하였습니다. 익명 클래스에서는 `OuterClass`의 `printMessage()` 메서드를 오버라이딩하여, "Hi there!"을 출력하도록 변경하였습니다.
+
+
+
+내부 클래스와 익명 클래스는 모두 클래스를 중첩해서 사용하는 것으로 코드의 모듈화를 증가시키고, 유지보수성을 높이는 효과가 있습니다. 하지만, 내부 클래스는 외부 클래스와의 결합도가 높아지고, 코드가 길어지는 단점이 있습니다. 반면에 익명 클래스는 간단하게 클래스를 구현할 수 있지만, 클래스의 정의와 생성을 한 번에 수행하기 때문에 재사용성이 떨어지는 단점이 있습니다.
