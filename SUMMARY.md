@@ -20,6 +20,8 @@
   * [용어정리](backend/java/undefined-10.md)
 * [Spring](backend/spring/README.md)
   * [배경](backend/spring/undefined.md)
+* [Database](backend/database/README.md)
+  * [데이터 모델링(+ERD)](backend/database/+erd.md)
 
 ## core
 
