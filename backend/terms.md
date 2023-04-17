@@ -1,4 +1,101 @@
-# 용어정리
+# Terms
+
+_<mark style="background-color:yellow;">Tightly coupling vs Loosely coupling?</mark>_
+
+타이트한 결합과 느슨한 결합은 소프트웨어 컴포넌트간의 상호 의존성 정도를 나타내는 용어입니다. 타이트한 결합은 두 개 이상의 컴포넌트가 서로 강하게 의존하는 상황을 말합니다. 즉, 한 컴포넌트에서 변경이 일어날 경우 다른 컴포넌트에도 큰 영향을 미칠 수 있습니다. 다시 말해, 타이트하게 결합된 컴포넌트는 서로 강하게 묶여있어 분리하기가 어려울 수 있습니다. 타이트한 결합 시스템은 유연성이 낮아서 유지보수가 어려울 수 있으며, 한 컴포넌트를 수정하면 다른 컴포넌트도 수정해야 하는 경우가 많습니다.
+
+반면, 느슨한 결합은 두 개 이상의 컴포넌트가 서로 독립적인 상황을 말합니다. <mark style="color:blue;">한 컴포넌트에서 변경이 일어나도 다른 컴포넌트에 영향을 미치지 않습니다. 느슨하게 결합된 컴포넌트는 독립적이며, 쉽게 수정하거나 교체할 수 있습니다.</mark> 느슨한 결합 시스템은 유연성이 높아서 유지보수와 수정이 쉬울 수 있습니다.
+
+```
+(높은 결합)
+An engine is tightly coupled to a Car.
+
+(낮은 결합)
+A wheel is loosely coupled to a Car.
+```
+
+결론적으로, 타이트하게 결합된 시스템은 개발이 용이하고 효율적일 수 있지만, 장기적으로 유지보수와 수정이 어려울 수 있습니다. 반면, 느슨하게 결합된 시스템은 개발이 복잡할 수 있지만, 유지보수와 수정이 쉽고 유연하게 대처할 수 있습니다.
+
+
+
+자바에서는  인터페이스를 사용하여 느슨한 결합으로 코드를 유지할 수 있습니다. 다음 예시코드는 높은 결합도를 가진 자바 클래스입니다. 게임을 변경할 때 여러 곳의 코드를 변경해야하므로 유지보수가 어렵습니다.&#x20;
+
+```java
+public class Nintendo {
+       public static void main(String[] args) {
+              var game = new MarioGame();
+              // var game = new PackManGame(); -> ERROR : 생성자 only for MarioGame 
+              // var game = new SuperContraGame(); -> ERROR : 생성자 only for MarioGame 
+
+              var gameRunner = new GameRunner(game);
+              gameRunner.run();
+       }
+}
+
+public class GameRunner {
+       private MarioGame game;
+       // private PackManGame game;
+       // private SuperContraGame game;
+              
+       public GameRunner(MarioGame game) {
+              this.game = game
+       }
+       
+       public void run() { ... }
+}
+
+public class MarioGame { ... }
+
+public class PacManGame { ... }
+
+public class SuperContraGame { ... }
+```
+
+
+
+하지만 인터페이스를 사용하여 코드를 느슨한 결합으로 코드 변경에 크게 영향을 받지 않을 뿐더러    클래스를 독립적으로 유지보수할 수 있습니다.
+
+```java
+public class Nintendo {
+       public static void main(String[] args) {
+              var game = new MarioGame();
+              // var game = new PackManGame(); -> OK 
+              // var game = new SuperContraGame(); -> OK 
+
+              var gameRunner = new GameRunner(game);
+              gameRunner.run();
+       }
+}
+
+public class GameRunner { 
+       private GameConsole game;
+       // private PackManGame game;
+       // private SuperContraGame game;
+              
+       public GameRunner(GameConsole game) {
+              this.game = game
+       }
+       
+       public void run() { ... }
+}
+
+public interface GameConsole {
+       public up () { ... }
+       public down () { ... }
+       public left () { ... }
+       public right () { ... }
+}
+
+public class MarioGame implements GameConsole { ... }
+
+public class PacManGame implements GameConsole { ... }
+
+public class SuperContra implements GameConsole { ... }
+```
+
+
+
+
 
 _<mark style="background-color:yellow;">package?</mark>_
 
@@ -269,8 +366,4 @@ public final Singleton {
 _<mark style="background-color:yellow;">class Vector?</mark>_&#x20;
 
 동적으로 객체를 저장할 수 있는 클래스입니다. 10개 이상의 인스턴스가 저장되면 자동적으로 크기가 증가합니다. 이처럼, 배열의 크기를 알아서 관리해주기때문에 저장할 인스턴스 개수에 신경쓰지 않아도 됩니다.
-
-
-
-
 

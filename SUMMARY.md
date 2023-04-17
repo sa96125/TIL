@@ -17,11 +17,11 @@
   * [상속](backend/java/undefined-6.md)
   * [다형성](backend/java/undefined-7.md)
   * [에러 핸들링](backend/java/undefined-9.md)
-  * [용어정리](backend/java/undefined-10.md)
 * [Spring](backend/spring/README.md)
   * [배경](backend/spring/undefined.md)
 * [Database](backend/database/README.md)
   * [데이터 모델링(+ERD)](backend/database/+erd.md)
+* [Terms](backend/terms.md)
 
 ## core
 
