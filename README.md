@@ -18,4 +18,5 @@
 
 * 2023-04-12\
   스프링 기반의 프로젝트 유지 보수/신기능 개발 배정\
-  Spring 문서 작성 (feat. 김영한의 스프링 입문)
+  Spring 문서 작성 (feat. 김영한의 스프링 입문)\
+  Master Spring Boot 3 & Spring Framework 6 with Java (Udemy/in28MinutesOfficial)\
