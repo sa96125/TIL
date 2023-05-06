@@ -1,6 +1,6 @@
 # 코어
 
-#### Tight Coupling and Loose Coupling
+_<mark style="background-color:yellow;">Tight coupling and Loose coupling?</mark>_
 
 결합도는 좋은 소프트웨어를 만드는데 매우 중요한 개념입니다. 이는 소프트웨어 컴포넌트나 모듈 내부의 요소들이 얼마나 밀접하게 연결되어 있는지를 말합니다. 높은 결합도는 한 요소의 변경이 다른 요소에 큰 영향을 미치는 것을 의미합니다. 반면에 낮은 결합도는 한 요소의 변경이 다른 요소에 미치는 영향이 적다는 것을 의미합니다.
 
@@ -15,9 +15,53 @@
 
 &#x20;개발을 하면 알겠지만, 비지니스에도 변화가 있을 수 있고 프레임 워크, 코드등 모든 것이 변경될 수 있습니다. <mark style="color:blue;">가능한 코드를 적게 변경하면서 기능을 변경</mark>할 수 있어야합니다. 왜냐하면 모듈의 내부 구성 요소가 서로 강하게 결합되어 있으면 코드를 이해하거나 수정하기 어렵고 유지보수가 어려워집니다. 따라서 가능한 느슨한 결합을 사용해야합니다.&#x20;
 
-####
 
-####
+
+자바에서는 인터페이스를 사용하여 강한결합을 느슨한 결합으로 만들 수 있습니다. 인터페이스를 중간에 넣음으로서 각 모듈의 의존성을 하나로 만들어 독립적으로 변경할 수 있습니다.
+
+
+
+
+
+_<mark style="background-color:yellow;">Dependency Injection</mark>_
+
+의존성 주입이란 클래스간 의존성을 연결하는 행위를 말합니다. 바로 코드와 함께 설명하겠습니다.
+
+```java
+// Object creation
+var game = new PacmanGame();
+
+// Object creation + Wiring of dependencies
+// game is a dependency of gameRunner
+var gameRunner = new GameRunner(game);
+```
+
+
+
+대규모 어플리케이션의 경우, 수천개의 의존성이 생성되며 필요한 곳에 주입됩니다. 이러한 행동을 일일히 수동으로 하는 것보다, Spring 프레임워크에게 위임할 수 없을 까요?
+
+
+
+```java
+// 1. Launch Spring Context.
+// 2. Configure the things that Spring frameworks to manage.
+// @Configuraion : 스프링에서 관리했으면 하는 일들을 정의하는 클래스
+// @Bean : 관리하는 일을 등록할 때 사용하는 메소드
+
+var context = new AnnotaionConfigApplicationContext(configuration.class)
+
+System.out.println(context.getBean(""))
+```
+
+
+
+
+
+런치 SpringContext : 스프링 프레임워크가 해줬으면&#x20;
+
+@Configration Class 에서 @Bean 등록()
+
+
 
 #### IOC Container
 
@@ -32,8 +76,6 @@
 
 
 #### Dependency Injection
-
-
 
 #### Spring Beans
 

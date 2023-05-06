@@ -9,6 +9,7 @@
   * [개발환경(intelliJ)](backend/java/intellij.md)
   * [설치(Mac)](backend/java/mac.md)
   * [실행(JVM)](backend/java/jvm.md)
+  * [JDK 16](backend/java/jdk-16.md)
   * [변수와 상수, 리터럴](backend/java/undefined-1.md)
   * [연산자](backend/java/undefined-2.md)
   * [조건문과 반복문](backend/java/undefined-3.md)
