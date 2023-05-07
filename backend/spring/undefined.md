@@ -130,8 +130,32 @@ Array.stream(context.getBeanDefinitionNames())
 _<mark style="background-color:yellow;">AutoWiring?</mark>_\
 _<mark style="background-color:yellow;">매칭 된 스프링민이 여러개일 경우?</mark>_
 
-* @Primary  : 우선적으로 자동 연결
-* @Qualifier : 강제적으로 수동 연결
+* @Primary  : 빈에 우선순위 부여, 기본 자동 연결
+* @Qualifier : @Primary를 무시하고 특정 빈에 강제적으로 자동 연결
+
+```java
+@Component @Primary
+class QuickSort implements SortingAlgorithm { }
+
+@Component
+class BubbleSort implements SortingAlgorithm { }
+
+@Component @Qualifier("RadixSortQulifier")
+class RadixSort implements SortingAlgorithm { }
+
+// 여러개의 빈 후보군 중, 하나를 우선적으로 연결
+@Component 
+class ComplexAligorithm
+    @AutoWired
+    private SoortingAlgorithm algorithm;
+    
+// 오직 하나의 빈을 연결
+@Component 
+class ComplexAligorithm2
+    @AutoWired @Qualifier("RadixSortQulifier")
+    private SoortingAlgorithm algorithm;
+
+```
 
 
 
