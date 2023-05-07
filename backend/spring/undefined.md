@@ -286,3 +286,47 @@ _<mark style="background-color:yellow;">@Lazy?</mark>_&#x20;
 
 <figure><img src="../../.gitbook/assets/lazy.png" alt=""><figcaption></figcaption></figure>
 
+
+
+
+
+
+
+_<mark style="background-color:yellow;">@Scope?</mark>_
+
+스코프는 일반적으로 프로그래밍 언어에서 변수나 함수가 유효한 범위를 나타내는 용어입니다. 보통 변수나 함수를 선언할 때, 그것이 어디까지 유효한지 범위를 명시해야 합니다. 이 범위를 명시하는 것이 @Scope 어노테이션입니다.
+
+\
+Spring에서는 빈이 유효한 범위를 지정하기 위해 @Scope 어노테이션을 사용합니다. 예를 들어, 빈의 유효 범위를 싱글톤으로 지정하면, 해당 빈은 애플리케이션 전체에서 하나의 인스턴스만 생성됩니다. 반면에, 프로토타입 범위로 설정하면, 빈을 요청할 때마다 새로운 인스턴스가 생성됩니다. 스프링에서 빈은 싱글톤 패턴이 디폴트입니다.
+
+
+
+이외에도 web app 한정적인 스코프가 존재합니다.&#x20;
+
+* Request scope : HTTP 요청당 객체 하나의 인스턴스 생성
+* Session : 유저의 HTTP 세션당 하나의 인스턴스 생성
+* Application : 웹앱의 런타임동안 하나의 인스턴스 생성
+* Websocket : 웹 소켓 인스턴스당 하나의 인스턴스 생성
+
+
+
+
+
+
+
+_<mark style="background-color:yellow;">Prototype vs Singleton Bean Sope?</mark>_
+
+사용자의 정보를 가지고 있는 객체, 상태의 저장이 필요하다면 Prototype을 선언합니다.
+
+<figure><img src="../../.gitbook/assets/prototype.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+_<mark style="background-color:yellow;">java Singleton(GOF) vs Spring Singleton?</mark>_
+
+자바 가상머신 내에 하나의 객체 인스턴스가 있는 것이 자바 싱글톤에서의 정의이고 Spring Ioc 컨테이너 내에 하나의 객체 인스턴스가 있는 것을 스프링 싱글톤의 정의 입니다. 다시 말하면, JVM에 Spring IoC 컨테이너 여러개를 실행하면 두 싱글톤 패턴의 의미는 달라질 수 있겠으나, 대부분의 경우 같은 의미로 사용됩니다. JVM에 여러개의 IoC 컨테이너를 사용하는 일은 없기 때문이에요.
+
