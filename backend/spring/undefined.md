@@ -17,7 +17,9 @@ _<mark style="background-color:yellow;">Tight coupling and Loose coupling?</mark
 
 
 
-자바에서는 인터페이스를 사용하여 강한결합을 느슨한 결합으로 만들 수 있습니다. 인터페이스를 중간에 넣음으로서 각 모듈의 의존성을 하나로 만들어 독립적으로 변경할 수 있습니다.
+자바에서는 인터페이스를 사용하여 강한 결합을 느슨한 결합으로 만들 수 있습니다. 인터페이스를 중간에 넣음으로서 각 모듈의 의존성을 하나로 만들어 독립적으로 변경할 수 있게 됩니다.
+
+
 
 
 
@@ -25,7 +27,7 @@ _<mark style="background-color:yellow;">Tight coupling and Loose coupling?</mark
 
 _<mark style="background-color:yellow;">Dependency Injection</mark>_
 
-의존성 주입이란 클래스간 의존성을 연결하는 행위를 말합니다. 바로 코드와 함께 설명하겠습니다.
+의존성 주입이란 클래스간 의존성을 연결하는 행위를 말합니다.&#x20;
 
 ```java
 // Object creation
@@ -38,9 +40,13 @@ var gameRunner = new GameRunner(game);
 
 
 
-대규모 어플리케이션의 경우, 수천개의 의존성이 생성되며 필요한 곳에 주입됩니다. 이러한 행동을 일일히 수동으로 하는 것보다, Spring 프레임워크에게 위임할 수 없을 까요?
 
 
+
+
+_<mark style="background-color:yellow;">대규모 어플리케이션의 경우, 수천개의 의존성이 생성되며 필요한 곳에 주입됩니다. 이러한 행동을 일일히 수동으로 하는 것보다, Spring 프레임워크에게 위임할 수 없을 까요?</mark>_
+
+@Configuration , @Bean을 통해 스프링에게 위임할 수 있습니다.&#x20;
 
 ```java
 // 1. Launch Spring Context.
@@ -57,29 +63,75 @@ System.out.println(context.getBean(""))
 
 
 
-런치 SpringContext : 스프링 프레임워크가 해줬으면&#x20;
-
-@Configration Class 에서 @Bean 등록()
 
 
+_<mark style="background-color:yellow;">IOC Container?</mark>_ \
+_<mark style="background-color:yellow;">Spring Container vs Spring Context vs IOC Container vs Application Context?</mark>_
 
-#### IOC Container
+<mark style="color:blue;">스프링 컨테이너는 Spring Beans와 Life cycle를 관리</mark>합니다. 즉 애플리케이션의 객체 생성과 관리를 자동화하는 도구입니다. 미리 정의한 자바클래스(POJOs)들과 환경설정(config)들을 인풋으로 받아 스프링 프레임워크 런타임 시스템을 구성합니다. 객체를 생성하고 필요한 객체에 자동으로 의존성을 주입하기 때문에 개발자가 객체 간의 의존성을 직접 관리할 필요가 없습니다 :)
 
-
-
-#### Application Context
-
-
-
-#### Component Scan
+{% code overflow="wrap" %}
+```
+🔍 IOC(제어의 역전)는 프로그래밍에서의 제어 흐름에 대한 개념입니다. 일반적으로 객체지향 프로그래밍에서는 객체 간의 관계를 직접 코드로 구현합니다. 이러한 경우 객체가 다른 객체를 생성하거나, 다른 객체의 메서드를 호출하는 등의 제어 흐름이 객체 내부에 결합되어 있습니다. 하지만 제어의 역전은 이러한 객체 간의 결합도를 낮추기 위해, 객체 간의 관계를 외부에서 결정하도록 하는 것을 의미합니다. 즉, 객체가 자신이 사용할 객체를 직접 생성하거나 관리하지 않고, 이를 외부에 위임하는 것입니다. 이를 통해 객체 간의 결합도가 낮아지므로 유지보수와 테스트가 더 쉬워지는 장점이 있습니다.
+```
+{% endcode %}
 
 
 
-#### Dependency Injection
-
-#### Spring Beans
 
 
 
-#### Auto Wiring
+
+_<mark style="background-color:yellow;">Bean Factory vs Application Context?</mark>_
+
+스프링 컨테이너의 유형은 2가지로 나뉠 수 있습니다. Bean Factory는 디폴트 스프링 컨테이너를 말하고 Application Context는 엔터프라이즈급에서 다룰 수 있는 고급 기능을 포함하는 스프링 컨테이너 입니다.
+
+{% code overflow="wrap" %}
+```
+🔍 현대적인 웹 어플리케이션의 경우, AOP등 고급 기능을 사용하므로 Application Context를 자주 사용합니다. 웹 어플리케이션, 웹 서비스, Restful API, 마이크로 서비스에서 사용할 수 있습니다. Bean factory를 사용하는 경우는 메모리 사용에 극심한 제약이 있는 IoT 앱뿐입니다.
+```
+{% endcode %}
+
+
+
+
+
+
+
+&#x20;_<mark style="background-color:yellow;">POJOs vs Java Bean vs Spring Bean?</mark>_
+
+Java Bean(EJB) : 3가지 제약을 준수하는 클래스
+
+* public no-args constructor
+* getter, setter
+* serializable
+
+POJOs : 아무 제약이 없는 일반적으로 흔히 사용하는 기본 자바 객체
+
+Spring Bean : IOC Container가 관리하는 모든 객체
+
+
+
+
+
+
+
+_<mark style="background-color:yellow;">스프링 컨테이너가 관리하는 객체 모두 출력하는 방법?</mark>_
+
+```java
+Array.stream(context.getBeanDefinitionNames())
+    .forEach(System.out::println)
+```
+
+
+
+
+
+
+
+_<mark style="background-color:yellow;">AutoWiring?</mark>_\
+_<mark style="background-color:yellow;">매칭 된 스프링민이 여러개일 경우?</mark>_
+
+* @Primary  : 우선적으로 자동 연결
+* @Qualifier : 강제적으로 수동 연결
 
