@@ -253,3 +253,14 @@ public class PackmanGame() implements GamingConsle {
 
 수동으로 객체를 생성하지 않고 스프링 프레임워크가 자동으로 생성해줄 수 있습니다. 이를 통해 상당량의 코드를 줄일 수 있게 됩니다. <mark style="color:blue;">스프링은 @Bean을 통해 객체를 관리하고 @AutoWiring을 수행할 뿐아니라 @Component와 @ComponentScan을 통해 필요한 객체를 패키지에서 찾고 객체를 생성하여 전체 애플리케이션을 정상적으로 작동시켜 줍니다.</mark>
 
+
+
+
+
+
+
+_<mark style="background-color:yellow;">@Bean vs @Component?</mark>_
+
+일반적으로 @Component 방식이 권장 되지만, Bean을 생성하기 전에 수행하는 비지니스 로직이 많거나, 특정 라이브러리에 접근해 커스텀 설정이 필요하다면 @Bean 방식을 선택하는 것이 좋습니다.
+
+<figure><img src="../../.gitbook/assets/ComponentsVsBean.png" alt=""><figcaption></figcaption></figure>
