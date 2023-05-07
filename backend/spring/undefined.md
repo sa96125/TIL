@@ -48,14 +48,12 @@ _<mark style="background-color:yellow;">대규모 어플리케이션의 경우, 
 
 @Configuration , @Bean을 통해 스프링에게 위임할 수 있습니다.&#x20;
 
+스프링에서 관리하는 일(자바 객체 : Spring Bean)들을 정의하는 클래스를 Configuration Class라고 합니다.
+
 ```java
 // 1. Launch Spring Context.
 // 2. Configure the things that Spring frameworks to manage.
-// @Configuraion : 스프링에서 관리했으면 하는 일들을 정의하는 클래스
-// @Bean : 관리하는 일을 등록할 때 사용하는 메소드
-
 var context = new AnnotaionConfigApplicationContext(configuration.class)
-
 System.out.println(context.getBean(""))
 ```
 
@@ -134,4 +132,47 @@ _<mark style="background-color:yellow;">매칭 된 스프링민이 여러개일 
 
 * @Primary  : 우선적으로 자동 연결
 * @Qualifier : 강제적으로 수동 연결
+
+
+
+
+
+
+
+_<mark style="background-color:yellow;">지금까지는 의존성이 필요하다면 개발자가 직접 @Bean을 등록했었습니다.</mark>_\
+_<mark style="background-color:yellow;">스프링이 자동으로 객체를 생성해서 의존성을 주입할 수는 없을까요?</mark>_
+
+작성되었던 @Bean을 삭제하고 @Component를 추가하여 스프링이 자동생성할 수 있도록 변경하였습니다.
+
+```java
+// in @Configuration class
+// @Bean
+// public game() {
+//    return new PackmanGame()
+// }
+
+@Bean
+public gameRunner(GamingConsle game) {
+    return new GameRunner(game);
+}
+
+// in POJOs
+@Component
+public class PackmanGame() implements GamingConsle {
+    // ...
+}
+```
+
+
+
+하지만, NoSearchBeanDefinitionException 발생합니다. 스프링이 정의된 컴포넌트를 찾을 수 없기때문에 발생하는 문제입니다. 따라서 @ComponentScan 을 추가하여 해당 위치를 알려주어 문제를 해결합니다.
+
+```java
+@Configuration
+@ComponentScan("path:package")
+```
+
+
+
+수동으로 객체를 생성하지 않고 스프링 프레임워크가 자동으로 생성해줄 수 있습니다. 이를 통해 상당량의 코드를 줄일 수 있게 됩니다. <mark style="color:blue;">스프링은 @Bean을 통해 객체를 관리하고 @AutoWiring을 수행할 뿐아니라 @Component와 @ComponentScan을 통해 필요한 객체를 패키지에서 찾고 객체를 생성하여 전체 애플리케이션을 정상적으로 작동시켜 줍니다.</mark>
 
