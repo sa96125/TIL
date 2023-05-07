@@ -345,5 +345,44 @@ _<mark style="background-color:yellow;">@PostConstruc / @PreDestory?</mark>_
 
 @PostConstruc 의존성 주입 직후, 필요한 작업을 수행할 수 있습니다. 예를 들어 데이터베이스등에서 데이터를 가져오려는 경우에 사용할 수 있습니다. @PreDestroy 어노테이션을 사용하면 해당 빈이 소멸되기 전에 필요한 마무리 작업을 수행합니다. 객체의 소멸 전에 필요한 처리를 자동으로 수행할 수 있으므로, 메모리 누수나 데이터 불일치와 같은 문제를 방지하고 안정적인 애플리케이션을 구현할 수 있습니다.
 
+```java
+@PostConstruct
+public void initialize() {
+    // ...
+}
 
+@PreDestroy
+public void cleanup() {
+    // ...
+}
+```
+
+
+
+
+
+
+
+_<mark style="background-color:yellow;">Stereotype Annotations?</mark>_
+
+Stereotype Annotations은 Spring Framework에서 제공하는 어노테이션으로, 주로 객체에 대한 메타 정보를 설정하는 데 사용됩니다. 객체의 역할과 용도에 따라 어노테이션을 부여하여 객체를 분류하고, 스프링 컨테이너가 이를 자동으로 인식하여 빈(Bean) 객체를 생성하고 관리할 수 있게 합니다. Stereotype Annotations에는 다음과 같은 종류가 있습니다.
+
+1. @Component
+   * 일반적인 객체를 스프링 빈 객체로 등록합니다.
+   * @Controller, @Service, @Repository 어노테이션도 @Component 어노테이션의 확장판이며, 해당 객체가 컨트롤러, 서비스, 리파지토리 역할을 한다는 의미를 더합니다.
+2. @Configuration
+   * 스프링 설정 파일을 대체하는 자바 클래스를 설정 파일로 지정합니다.
+   * @Bean 어노테이션과 함께 사용하여 스프링 빈 객체를 생성합니다.
+3. @Autowired
+   * 빈 객체를 주입할 때 사용합니다.
+   * 해당 어노테이션이 부여된 필드나 생성자에 자동으로 스프링 빈 객체가 주입됩니다.
+4. @Qualifier
+   * @Autowired 어노테이션과 함께 사용되어, 같은 타입의 빈 객체가 여러 개일 경우 어떤 객체를 주입할 지 지정합니다.
+5. @Scope
+   * 빈 객체의 생명 주기를 설정합니다.
+   * @Scope("prototype") 어노테이션을 사용하면 매번 새로운 빈 객체가 생성됩니다.
+
+
+
+Stereotype Annotations를 사용하면 객체를 선언하는 코드를 간결하게 만들 수 있으며, 객체의 역할에 따라 코드를 구분하고 관리하기 용이합니다. 또한, 스프링 컨테이너가 객체를 자동으로 인식하여 빈 객체를 생성하고 관리해주기 때문에 개발자가 별도로 객체를 생성하고 관리할 필요가 없습니다.
 
