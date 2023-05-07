@@ -40,6 +40,53 @@ var gameRunner = new GameRunner(game);
 
 
 
+의존성 주입의 방법은 크게 3가지로 나뉩니다.
+
+* Construct-based
+* Setter-based
+* Field
+
+```java
+@Component
+class MyApp {
+
+    // Field, @AutoWired 필수 
+    @AutoWired
+    private Dependency1 dependency1;
+    
+    @AutoWired
+    private Dependency2 dependency2;
+
+    // Setter-based, @AutoWired 필수
+    @AutoWired
+    public void setDependency1(Dependency1 dependency) {
+        this.dependency1 = dependency;
+    }
+    
+    @AutoWired
+    public void setDependency2(Dependency2 dependency) {
+        this.dependency2 = dependency;
+    }
+    
+    // Construct-based, @AutoWired 옵션
+    public MyApp(Dependency1 dependency1, Dependency2 dependency2) {
+        super();
+        this.dependency1 = dependency1;
+        this.dependency2 = dependency2;
+    }
+}
+```
+
+
+
+어떤 방식을 사용해야하는 걸까요?
+
+스프링 팀은 생성자 방식의 의존성 주입을 추천합니다. 객체 생성과 동시에 초기화할 수 있어 안전하고, @AutoWired 어노테이션을 선언할 필요가 없기 때문입니다.
+
+
+
+
+
 
 
 
