@@ -79,9 +79,18 @@ class MyApp {
 
 
 
-어떤 방식을 사용해야하는 걸까요?
+
+
+
+
+_<mark style="background-color:yellow;">어떤 방식을 사용해야하는 걸까요?</mark>_ \
+_<mark style="background-color:yellow;">의존성 주입이 스프링에서 왜 이렇게 강조되는 것일까요?</mark>_
 
 스프링 팀은 생성자 방식의 의존성 주입을 추천합니다. 객체 생성과 동시에 초기화할 수 있어 안전하고, @AutoWired 어노테이션을 선언할 필요가 없기 때문입니다.
+
+
+
+Real World 어플리케이션의 경우, 상당히 복잡한 구성으로 되어있습니다. 수백개의 클래스간의 의존성을 일일히 다루는 것은 쉽지 않은 일입니다. 따라서, 객체의 생성 및 의존성 연결 및 생명 주기 관리는 스프링 프레임워크에게 넘기고 프로그래머는 비지니스로직에만 집중할 수 있습니다.&#x20;
 
 
 
@@ -264,3 +273,16 @@ _<mark style="background-color:yellow;">@Bean vs @Component?</mark>_
 일반적으로 @Component 방식이 권장 되지만, Bean을 생성하기 전에 수행하는 비지니스 로직이 많거나, 특정 라이브러리에 접근해 커스텀 설정이 필요하다면 @Bean 방식을 선택하는 것이 좋습니다.
 
 <figure><img src="../../.gitbook/assets/ComponentsVsBean.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+_<mark style="background-color:yellow;">@Lazy?</mark>_&#x20;
+
+스프링 빈은 시작할 때 즉시 초기화 됩니다. @Lazy 어노테이션을 추가하면, 해당 빈이 호출 될 때, 초기화됩니다. 즉시 초기화를 사용하면 해당 객체의 에러를 즉시 검출 할 수 있습니다. 지연 로딩은 앱이 시작될 때, 스프링 구성 오류를 검출 할 수 없습니다. 따라서 추천되지도 자주 사용되지도 않습니다.&#x20;
+
+<figure><img src="../../.gitbook/assets/lazy.png" alt=""><figcaption></figcaption></figure>
+
