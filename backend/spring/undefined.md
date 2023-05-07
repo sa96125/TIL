@@ -330,3 +330,20 @@ _<mark style="background-color:yellow;">java Singleton(GOF) vs Spring Singleton?
 
 자바 가상머신 내에 하나의 객체 인스턴스가 있는 것이 자바 싱글톤에서의 정의이고 Spring Ioc 컨테이너 내에 하나의 객체 인스턴스가 있는 것을 스프링 싱글톤의 정의 입니다. 다시 말하면, JVM에 Spring IoC 컨테이너 여러개를 실행하면 두 싱글톤 패턴의 의미는 달라질 수 있겠으나, 대부분의 경우 같은 의미로 사용됩니다. JVM에 여러개의 IoC 컨테이너를 사용하는 일은 없기 때문이에요.
 
+
+
+
+
+
+
+_<mark style="background-color:yellow;">@PostConstruc / @PreDestory?</mark>_
+
+스프링 빈의 라이프 사이클 메서드를 설정할 수 있습니다.
+
+* PostConstruc : 생성자 호출(의존성 주입) 직후에 실행
+* PreDestroy : 컨텍스트에서 빈이 삭제되기 직전에 실행&#x20;
+
+@PostConstruc 의존성 주입 직후, 필요한 작업을 수행할 수 있습니다. 예를 들어 데이터베이스등에서 데이터를 가져오려는 경우에 사용할 수 있습니다. @PreDestroy 어노테이션을 사용하면 해당 빈이 소멸되기 전에 필요한 마무리 작업을 수행합니다. 객체의 소멸 전에 필요한 처리를 자동으로 수행할 수 있으므로, 메모리 누수나 데이터 불일치와 같은 문제를 방지하고 안정적인 애플리케이션을 구현할 수 있습니다.
+
+
+
