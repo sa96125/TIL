@@ -19,4 +19,15 @@
 * 2023-04-12\
   스프링 기반의 프로젝트 유지 보수/신기능 개발 배정\
   Spring 문서 작성 (feat. 김영한의 스프링 입문)\
-  \
+
+* 2023-05-10\
+  로그인\
+  이메일 인증\
+  Dto 규격 정의\
+  jpa (CRUD)\
+  swagger 문서 작업\
+  JwtAuthenticationFilter\
+  CustommizeResponseEntityExceptionHandler\
+  .yml 관리(dev/staging/prod)\
+  EC2(우분투) 아파치 배포 주소 프록시 셋팅\
+  S3 이미지 관리
